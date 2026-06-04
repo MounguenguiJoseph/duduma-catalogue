@@ -9,8 +9,8 @@ interface VariantSelectorProps {
 }
 
 export default function VariantSelector({ variants, selectedVariantId, onSelect }: VariantSelectorProps) {
-  const sizes = [...new Set(variants.map(v => v.size).filter(Boolean))] as string[]
-  const colors = [...new Set(variants.map(v => v.color).filter(Boolean))] as string[]
+  const sizes = Array.from(new Set(variants.map(v => v.size).filter(Boolean))) as string[]
+  const colors = Array.from(new Set(variants.map(v => v.color).filter(Boolean))) as string[]
   const selectedVariant = variants.find(v => v.id === selectedVariantId) ?? null
 
   function handleSizeClick(size: string) {
