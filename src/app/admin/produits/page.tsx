@@ -54,6 +54,7 @@ export default function AdminProduitsPage() {
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
+          <Link href="/admin/commandes" className="text-xs text-green-600 font-medium mb-1 block">← Paiements en attente</Link>
           <h1 className="text-xl font-bold">Produits</h1>
           <p className="text-sm text-gray-500">{products.length} article{products.length > 1 ? 's' : ''}</p>
         </div>
